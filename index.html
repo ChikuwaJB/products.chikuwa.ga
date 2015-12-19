@@ -13,6 +13,14 @@
   $(window).load(function () {
     $("#loader").fadeOut(1000);
     $("#wrapper").fadeIn(1000);
+    $("#next").click(function(){
+    var p=$("#product").offset().top-30;
+    $("html,body").animate({
+        scrollTop : p
+    }, {
+        queue : false
+    });
+});
   });
   </script>
   <body>
@@ -70,7 +78,7 @@
               <a href="https://www.coinbase.com/checkouts/958f129240d7888c0e28d1a2e4179530" class="fa-btc">Donate</a>
             </li>
           </ul>
-          <a href="#" class="fa fa-angle-down fa-5x"></a>
+          <a href="#" id="next" class="fa fa-angle-down fa-5x"></a>
         </footer>
       </section>
       <section id="product">
